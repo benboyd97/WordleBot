@@ -1,0 +1,15 @@
+#ignore these file locations
+wbot/__pycache__/*
+wbot/.pytest_cache/*
+
+
+
+wbot/UnitTesting/__pycache__/*
+wbot/UnitTesting/.pytest_cache/*
+wbot/UnitTesting/.ipynb_ceckpoints/*
+
+wbot/.ipynb_checkpoints/*
+
+.pytest_cache/*
+.ipynb_ceckpoints/*
+.__pycache__/*
