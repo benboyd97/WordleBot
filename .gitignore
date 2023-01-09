@@ -11,3 +11,4 @@ wbot/UnitTesting/.ipynb_ceckpoints/*
 .pytest_cache/*
 .ipynb_checkpoints/*
 .__pycache__/*
+.cache/v/*
