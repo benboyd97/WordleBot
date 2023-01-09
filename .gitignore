@@ -8,8 +8,6 @@ wbot/UnitTesting/__pycache__/*
 wbot/UnitTesting/.pytest_cache/*
 wbot/UnitTesting/.ipynb_ceckpoints/*
 
-wbot/.ipynb_checkpoints/*
-
 .pytest_cache/*
-.ipynb_ceckpoints/*
+.ipynb_checkpoints/*
 .__pycache__/*
