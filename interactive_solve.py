@@ -1,4 +1,5 @@
-from wbot import read,play_c,solve_c,printing,validation_c
+from wbot import read,printing
+from wbot.wbot import play_c,solve_c,validation_c
 import numpy as np
 
 def interactive_solve(tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5):

@@ -198,7 +198,7 @@ def manual_cut_off(tgrid,plist,glist,igrid,count):
 
 
     #output the number of possible words remaining
-    print('Possible Answers:', len(plist))
+    print('Possible Answers: '+ str(len(plist)))
     
     #print the remaining words
     if len(plist)>1:
@@ -223,7 +223,7 @@ def manual_cut_off(tgrid,plist,glist,igrid,count):
     guess=plist[np.argmax(info_list)]
 
     #output guess to try
-    print('Next Suggesed Guess: ',guess.upper())
+    print('Next Suggesed Guess: '+guess.upper())
     count+=1
 
     #allow user to pick suggested guess or pick another
