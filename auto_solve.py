@@ -1,4 +1,4 @@
-from wbot import read,play,solve,printing
+from wbot import read,play_c,solve_c,printing
 import numpy as np
 
 
@@ -33,13 +33,13 @@ def auto_solve(true_word,tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5
     print('True Word:'  ,true_word.upper())
     
     #simulate tils given first guess is salet
-    ts=play.tiles(w,'salet')
+    ts=play_c.tiles(w,'salet')
 
     #ouput tile outcome
     printing.print_guess(ts,'salet') 
     
     #reduce new tile grid and new word list given new information
-    tgrid,new_plist=solve.reduce('salet',ts,tiles_grid,plist,glist)
+    tgrid,new_plist=solve_c.reduce('salet',ts,tiles_grid,plist,glist)
 
     #find precomputed best second guess for the given tile outcome
     guess=sal_guess[np.where(np.prod(sal_patterns ==ts, axis = -1))[0][0]]
@@ -52,19 +52,19 @@ def auto_solve(true_word,tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5
         count+=1
         
         #simulate tiles given true word and guess word
-        ts=play.tiles(w,guess)
+        ts=play_c.tiles(w,guess)
 
         #ouput tile outcome
         printing.print_guess(ts,guess)
 
         #reduce new tile grid and new word list given new information
-        tgrid,new_plist=solve.reduce(guess,ts,tgrid,new_plist,glist)
+        tgrid,new_plist=solve_c.reduce(guess,ts,tgrid,new_plist,glist)
         
         #if wordle is not solved yet
         if ts!=[2,2,2,2,2]:
             
             #calculate the expected information for the next guess
-            info_grid=solve.info_grid(tgrid)
+            info_grid=solve_c.info_grid(tgrid)
             
             #use guess with the highest expected information as next guess
             guess=glist[np.argmax(info_grid)]
@@ -79,10 +79,10 @@ def auto_solve(true_word,tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5
         #if only one  guess has been made 
         if count==1:
             #calculate the expected information of each second guess
-            info_grid=solve.info_grid(tgrid)
+            info_grid=solve_c.info_grid(tgrid)
 
         #apply cut off routine to only guess from the remaining possible words, but still maximise information
-        guess,count=solve.cut_off(w,tgrid,new_plist,glist,info_grid,count)  
+        guess,count=solve_c.cut_off(w,tgrid,new_plist,glist,info_grid,count)  
     
     #output total guesses
     print('Total Guesses: ',count) 
@@ -112,7 +112,7 @@ if __name__ == "__main__":
     #while true word is not a valid wordle answer
     while invalid:
         #take true word as input
-        true_word=input('Word to guess: ')
+        true_word=input('Word to guess: ').lower()
         #if true word is in possible wordle answer list
         if true_word in plist:
             #break

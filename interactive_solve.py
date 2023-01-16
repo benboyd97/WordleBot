@@ -1,4 +1,4 @@
-from wbot import read,play,solve,printing,validation
+from wbot import read,play_c,solve_c,printing,validation_c
 import numpy as np
 
 def interactive_solve(tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5):
@@ -28,10 +28,10 @@ def interactive_solve(tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5):
     print('Suggested Guess: SALET')
 
     #allow user to select suggested starter word or input their own valid guess
-    guess=validation.guess_input('salet',glist)
+    guess=validation_c.guess_input('salet',glist)
     
     #reduce new tile grid and new word list given new information
-    tgrid,new_plist,ts=validation.possible_reduce(guess,tiles_grid,plist,glist)
+    tgrid,new_plist,ts=validation_c.possible_reduce(guess,tiles_grid,plist,glist)
 
     #if suggested starter word is used
     if guess=='salet':
@@ -42,7 +42,7 @@ def interactive_solve(tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5):
     #if alternative starter word is chosen
     else:
         #calculate the expected informaiton of each of the second guesses
-        info_grid=solve.info_grid(tgrid)
+        info_grid=solve_c.info_grid(tgrid)
 
         #pick word with most expected information to be second suggested guess
         guess=glist[np.argmax(info_grid)]
@@ -61,15 +61,15 @@ def interactive_solve(tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5):
         print('Next Suggested Guess: ',guess.upper())
 
         #allow user to select suggested guess word or input their own valid guess
-        guess=validation.guess_input(guess,glist)
+        guess=validation_c.guess_input(guess,glist)
 
         #reduce new tile grid and new word list given new information
-        tgrid,new_plist,ts=validation.possible_reduce(guess,tgrid,new_plist,glist)
+        tgrid,new_plist,ts=validation_c.possible_reduce(guess,tgrid,new_plist,glist)
         
         #if wordle is not yet solved
         if ts!=[2,2,2,2,2]:
             #calculate the expected information of all guess words
-            info_grid=solve.info_grid(tgrid)
+            info_grid=solve_c.info_grid(tgrid)
 
             #pick guess word with highest expected information
             guess=glist[np.argmax(info_grid)]
@@ -105,9 +105,9 @@ def interactive_solve(tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5):
         #if only one  guess has been made 
         if count==1:
             #calculate the expected information of each second guess
-            info_grid=solve.info_grid(tgrid)
+            info_grid=solve_c.info_grid(tgrid)
         #apply cut off routine to only guess from the remaining possible words, but still maximise information
-        guess,count=solve.manual_cut_off(tgrid,new_plist,glist,info_grid,count) 
+        guess,count=solve_c.manual_cut_off(tgrid,new_plist,glist,info_grid,count) 
 
         #output total guesses
         print('Total Guesses: ',count)  

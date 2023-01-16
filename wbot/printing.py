@@ -3,7 +3,7 @@ from colorama import Fore,Back,Style
 def print_guess(tiles,guess):
 
     """
-    Print Guess
+    printing.print_guess(tiles,guess)
 
     Print the guess shadiding in each letter according to the coloured tile
 
