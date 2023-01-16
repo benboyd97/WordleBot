@@ -1,5 +1,4 @@
-from wbot import read,printing
-from wbot.wbot import play_c,solve_c
+from wbot import read,printing,play_c,solve_c
 import numpy as np
 
 
