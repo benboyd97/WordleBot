@@ -1,11 +1,32 @@
-from colorama import Fore, Back,Style
+from colorama import Fore,Back,Style
 
-def print_guess(ts,g):
+def print_guess(tiles,guess):
 
-    g=g.upper()
+    """
+    Print Guess
 
+    Print the guess shadiding in each letter according to the coloured tile
+
+    Parameters
+    ----------
+
+    tiles: tiles that the guess word yielded arr (5 integers)
+    guess: guess word just used str (5 letters)
+
+    """
+
+
+    #make guess upper case
+    guess=guess.upper()
+
+    #tile colours 
     cs=[Fore.WHITE,Fore.YELLOW,Fore.GREEN]
 
+    #black background
     print(Back.BLACK)
-    print(cs[ts[0]]+g[0]+cs[ts[1]]+g[1]+cs[ts[2]]+g[2]+cs[ts[3]]+g[3]+cs[ts[4]]+g[4])
+
+    #print coloured letters according to each tile
+    print(cs[tiles[0]]+guess[0]+cs[tiles[1]]+guess[1]+cs[tiles[2]]+guess[2]+cs[tiles[3]]+guess[3]+cs[tiles[4]]+guess[4])
+
+    #reset colours and background
     print(Style.RESET_ALL)

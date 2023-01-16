@@ -7,7 +7,7 @@ sys.path.append('wbot/')
 sys.path.append('WordleBot/wbot/')
 
 
-import play,printing
+import play,printing,validation
 
 def reduce(guess,tiles,tgrid,plist,glist):
 
@@ -42,6 +42,7 @@ def reduce(guess,tiles,tgrid,plist,glist):
     w=np.where(np.prod(tgrid[g_id,:,:] == tiles, axis = -1))[0]
     
     #output the tile grid and word lists containing only these possible tiles.
+
     return tgrid[:,w,:],plist[w]
 
 
@@ -192,9 +193,16 @@ def manual_cut_off(tgrid,plist,glist,igrid,count):
 
 
 
-    
+    #output the number of possible words remaining
     print('Possible Answers:', len(plist))
+    
+    #print the remaining words
+    if len(plist)>1:
+        print_str=''
+        for p in plist:
+            print_str+=p.upper()+'  '
 
+        print(print_str)
 
     #create lists to store ids and expected information of possible words from larger guess name and information lists.
     ids=[]
@@ -211,15 +219,14 @@ def manual_cut_off(tgrid,plist,glist,igrid,count):
     guess=plist[np.argmax(info_list)]
 
     #output guess to try
-    print('Next Guess: ',guess.upper())
+    print('Next Suggesed Guess: ',guess.upper())
     count+=1
-    #user inputs tiles corresponding to new guess
-    ts=input('Type Tiles: ')
 
-    ts=[int(ts[0]),int(ts[1]),int(ts[2]),int(ts[3]),int(ts[4])]
+    #allow user to pick suggested guess or pick another
+    guess=validation.guess_input(guess,glist)
 
-    
-    printing.print_guess(ts,guess)
+    #allow user to input tiles and reduce tiles grid according to the new information
+    tgrid,plist_,ts=validation.possible_reduce(guess,tgrid,plist,glist)
 
     #if the true word and guess match
     if ts==[2,2,2,2,2]:
@@ -227,14 +234,12 @@ def manual_cut_off(tgrid,plist,glist,igrid,count):
 
     #if the guess does not match the true word      
     else:
-        #reduce tiles grid and possible answers list further given new information
-        tgrid,plist_=reduce(guess,ts,tgrid,plist,glist)
 
-        print('Possible Answers:', len(plist))
         #if the answer list only has one possible answer   
         if len(plist_)==1:
 
             count+=1
+            print('Possible Answers: 1')
             #output answer and finish
             printing.print_guess([2,2,2,2,2],plist_[0])
 
@@ -242,5 +247,5 @@ def manual_cut_off(tgrid,plist,glist,igrid,count):
         
         #apply manual_cut_off(.) again to find word amongst shorter possile list
         else:
-            guess,count=manual_cut_off(tgrid,plist_,glist,igrid)
+            return manual_cut_off(tgrid,plist_,glist,igrid,count)
 
