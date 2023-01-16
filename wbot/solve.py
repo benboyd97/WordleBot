@@ -12,7 +12,8 @@ import play,printing,validation
 def reduce(guess,tiles,tgrid,plist,glist):
 
     """
-    Reduce
+    solve.reduce(guess,tiles,tgrid,plist,glist)
+    -------------------------------------------
     
     Find all words that match a set of tiles given a guess.
     Cross out words that are not possible from the word list and tiles grid.
@@ -49,7 +50,8 @@ def reduce(guess,tiles,tgrid,plist,glist):
 
 def info_grid(tgrid):
     """
-    Information Grid
+    solve.info_grid(tgrid)
+    ----------------------
 
     Find the expected informaton gain by choosing each guess.
     
@@ -98,7 +100,8 @@ def info_grid(tgrid):
 def cut_off(w,tgrid,plist,glist,igrid,count):
 
     """
-    Cut Off
+    solve.cut_off
+    -------------
 
     Function for finding the true word by only guessing with words from the possible remaining answers. 
     This function is used once the other possible list of words is reduced to a small number of words.
@@ -174,7 +177,8 @@ def manual_cut_off(tgrid,plist,glist,igrid,count):
 
 
     """
-    Manual Cut Off
+    solve.manual_cut_offtgrid,plist,glist,igrid,count)
+    --------------------------------------------------
 
     Only to be used when the user is playing interactively, typing in the tile results and the true word is not knwon.
     

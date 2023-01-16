@@ -5,7 +5,8 @@ import solve,printing
 def guess_input(suggested_word,glist):
 
     """
-    Guess Input
+    validation.guess_input(suggested_word,glist)
+    ---------------------------------------------
 
     Ensure the guess being entered in interactive solver is in word list
     
@@ -48,7 +49,7 @@ def tiles_input():
 
 
     """
-    Tiles Input
+    validation.tiles_input()
 
     Ensure the tiles being entered in interactive solver are valid
 

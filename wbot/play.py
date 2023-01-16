@@ -1,7 +1,8 @@
 def find_pos(word,letter):
 
     """
-    Find Position
+    play.find_pos(word,letter)
+    -------------------------
     
     Find all locations of a letter in a word
     
@@ -62,7 +63,8 @@ def find_pos(word,letter):
 def tiles(word,guess):
 
     """
-    Tiles
+    play.tiles(word,guess)
+    ----------------------
     
     Returns the colours of each of the five tiles associated with each guess letter given the true word.
     
