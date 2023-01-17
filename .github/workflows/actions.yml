@@ -6,6 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: cd /home/runner/work
+      - run: rm -r WordleBot
       - run: git clone https://github.com/benboyd97/WordleBot.git
       - run: cd WordleBot
       - run: git switch dev_branch
