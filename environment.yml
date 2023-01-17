@@ -206,7 +206,6 @@ dependencies:
     - contourpy==1.0.6
     - debugpy==1.6.4
     - fonttools==4.38.0
-    - gpy==1.10.0
     - ipykernel==6.14.0
     - ipython==8.4.0
     - jupyter==1.0.0
