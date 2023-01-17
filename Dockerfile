@@ -6,7 +6,6 @@ RUN git clone https://github.com/benboyd97/WordleBot.git \
     &&git pull \
     &&conda\
     &&conda env update --file environment.yml --name base\
-    &&conda activate base \
     &&pytest wbot/UnitTesting/
 
 
