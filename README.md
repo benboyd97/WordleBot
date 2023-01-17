@@ -77,6 +77,8 @@ Example:
 >>> Final Answer: FLICK
 
 >>> Total Guesses: 4
+  
+ If you would like to read about the specific custom modules used to make WordleBot, please refer to the docstring in `wbot/__init__.py`.
 
 ## Data Analysis Pipeline
   
