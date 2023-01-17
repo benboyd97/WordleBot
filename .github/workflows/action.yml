@@ -1,5 +1,5 @@
-name: GitHub Work
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Continous Integration Checks
+run-name: ${{ github.actor }} continous integration checks
 on: [push]
 jobs:
   Explore-GitHub-Actions:
