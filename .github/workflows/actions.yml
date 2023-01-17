@@ -1,9 +1,6 @@
 name: Integrated_Testing
 on: [push]
 jobs:
-  runs:
-    using: 'docker'
-    image: 'Dockerfile'
-
+  runs-on: unbuntu-latest
   steps:
     -run: docker build -t conda
