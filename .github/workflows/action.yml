@@ -1,5 +1,5 @@
-name: Continous Integration Checks
-run-name: ${{ github.actor }} continous integration checks
+name: Continuous Integration Checks
+run-name: ${{ github.actor }} continuous integration checks
 on: [push]
 jobs:
   Explore-GitHub-Actions:
