@@ -1,6 +1,6 @@
 name: Integrated_Testing
 on: [push]
 jobs:
-  runs-on: unbuntu-latest
+  runs-on: ubuntu-latest
   steps:
     -run: docker build -t conda
