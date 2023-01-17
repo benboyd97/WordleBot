@@ -4,7 +4,13 @@ RUN git clone https://github.com/benboyd97/WordleBot.git
 
 RUN cd WordleBot
 
+RUN dir
+
+RUN ls -a
+
 RUN git switch dev_brach
+
+
 
 RUN git pull
 
