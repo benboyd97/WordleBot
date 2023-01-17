@@ -6,7 +6,7 @@ Wordle Bot built to solve Wordle in fewest number of guesses using Information T
 ```
 git clone https://github.com/benboyd97/WordleBot.git && cd WordleBot
 docker build -f demo.Dockerfile -t conda .
-docker run --rm -ti conda && cd WordleBot
+docker run --rm -ti conda
 ```
 
 
