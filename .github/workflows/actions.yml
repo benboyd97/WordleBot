@@ -1,6 +1,6 @@
 name: Integrated_Testing
 on: [push]
-description: 'Run unit tests in docker'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+jobs:
+  runs:
+    using: 'docker'
+    image: 'Dockerfile'
