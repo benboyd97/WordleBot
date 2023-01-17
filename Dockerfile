@@ -4,6 +4,8 @@ RUN git clone https://github.com/benboyd97/WordleBot.git
 
 RUN cd WordleBot
 
+Run cd WordleBot
+
 RUN dir
 
 RUN ls -a
