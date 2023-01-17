@@ -3,7 +3,8 @@ import os.path
 def word_list(file):
 
     """
-    Word List
+    read.word_list(file)
+    ------------------
     
     Read words from text file and return list of strings.
 

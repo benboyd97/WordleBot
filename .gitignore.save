@@ -1,7 +1,7 @@
 #ignore these file locations
 wbot/__pycache__/*
 wbot/.pytest_cache/*
-wbot/.ipynb_checkpoints/*
+wbot/
 
 
 wbot/UnitTesting/__pycache__/*
@@ -12,3 +12,4 @@ wbot/UnitTesting/.ipynb_ceckpoints/*
 .ipynb_checkpoints/*
 __pycache__/*
 .cache/v/*
+z
