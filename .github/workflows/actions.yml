@@ -4,3 +4,6 @@ jobs:
   runs:
     using: 'docker'
     image: 'Dockerfile'
+
+  steps:
+    -run: docker build -t conda
