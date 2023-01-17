@@ -1,12 +1,10 @@
 FROM continuumio/miniconda3
 
+RUN cd home
+
 RUN git clone https://github.com/benboyd97/WordleBot.git
 
 RUN cd WordleBot
-
-Run cd WordleBot
-
-RUN dir
 
 RUN ls -a
 
