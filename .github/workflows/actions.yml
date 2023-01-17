@@ -6,5 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run:  docker run -d -t --name=conda continuumio/miniconda3
-      - run: docker build -t conda .
+      - run: docker build -t conda /home/runner/work/WordleBot/Dockerfile
       - run: docker run --rm -ti conda
