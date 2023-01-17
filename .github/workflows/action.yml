@@ -8,4 +8,3 @@ jobs:
       - uses: actions/checkout@v3
       - run: docker run -d -t --name=conda continuumio/miniconda3
       - run: docker build -t conda .
-      - run: docker run --rm -ti conda
