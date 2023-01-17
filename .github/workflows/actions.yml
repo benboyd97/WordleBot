@@ -1,6 +1,9 @@
-name: Integrated_Testing
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    -run: docker build -t conda
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker run build -t conda .
+      - run: docker run --rm -ti conda
