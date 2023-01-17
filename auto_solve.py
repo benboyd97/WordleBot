@@ -108,7 +108,10 @@ if __name__ == "__main__":
     
 
     invalid=True
-
+    
+    print('')
+    print('''This will rely on you inputting the true Wordle word that is on the offical \n list of possible answers in possible_words.txt. WordleBot will then simulate \n the tiles after each guess and pick the next guess that will maximise the \n expected information gain.''')
+    print('')
     #while true word is not a valid wordle answer
     while invalid:
         #take true word as input

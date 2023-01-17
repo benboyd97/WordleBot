@@ -132,4 +132,13 @@ if __name__ == "__main__":
     sal_guess=np.load('wbot/salet_guess.npy')
     
     #run interactive solve script allowing the user to input their choice of guess word and tile outcomes.
+
+    print('')
+    print("This feature does not require the true word being known and can be used to play along \n with a live Wordle game. The Bot will first suggest a starting word that you can either choose \n or pick a different word for the offical alowed guess list found in guess_words.txt.")
+    print('')
+    print("You are then expected to input the outcome of the chosen guess word's tiles. 0 represents \n a grey tile, 1 represents a yellow tile and 2 represents a green tile. \n So for green, yellow, yellow, green and grey, you would input 21120.")
+    print('')
+    print("After these results are inputted, WordleBot will say how many possible answers are \n remaining and suggests the next guess that would maximise expected information. Again you can \n choose this suggested next guess or pick your own. The process continues until unkown word is found.")
+    print('')
+
     interactive_solve(tiles_grid,plist,glist,sal_patterns,sal_guess)
