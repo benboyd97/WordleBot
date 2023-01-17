@@ -2,7 +2,7 @@ from wbot import read,printing,play_c,solve_c
 import numpy as np
 
 
-def auto_solve(true_word,tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5):
+def auto_solve(true_word,tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5,starter_word='salet'):
 
     """
     Auto Solve
@@ -33,13 +33,13 @@ def auto_solve(true_word,tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5
     print('True Word:'  ,true_word.upper())
     
     #simulate tils given first guess is salet
-    ts=play_c.tiles(w,'salet')
+    ts=play_c.tiles(w,starter_word)
 
     #ouput tile outcome
-    printing.print_guess(ts,'salet') 
+    printing.print_guess(ts,starter_word) 
     
     #reduce new tile grid and new word list given new information
-    tgrid,new_plist=solve_c.reduce('salet',ts,tiles_grid,plist,glist)
+    tgrid,new_plist=solve_c.reduce(starter_word,ts,tiles_grid,plist,glist)
 
     #find precomputed best second guess for the given tile outcome
     guess=sal_guess[np.where(np.prod(sal_patterns ==ts, axis = -1))[0][0]]
