@@ -84,7 +84,7 @@ Example:
 
 ## Data Analysis Pipeline
   
- In `results.ipynb` contains a data pipeline that shows results of the WordleBot when applied to all possible answers, starting with different words and strategies.
+ The `Data_Experiments.ipynb` contains a data pipeline that applies WordleBot to every posible Wordle answer. There are also profiling tests in order to test the time efficiency of the bot. The results of these experiments are presented in `Results_Data_Analysis.ipynb`.
   
 ## Unit Testing and Conintous Integration
 
