@@ -101,7 +101,7 @@ WordleBot Solution Idea: 3Blue1Brown's [YouTube video](https://www.youtube.com/w
 
 Made for James Fergusson's Cambridge course in [Research-Computing](https://github.com/JamesFergusson/Research-Computing)
 
-Helpful Discussion: [Samuel Turner](https://github.com/samuelturner96)
+Helpful Discussion: [Samuel Turner](https://github.com/turnersam96)
 
 
 
