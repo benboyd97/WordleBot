@@ -1,4 +1,5 @@
 from wbot import read,printing,play_c,solve_c,validation_c
+from colorama import Fore,Back,Style
 import numpy as np
 
 def interactive_solve(tiles_grid,plist,glist,sal_patterns,sal_guess,cut_off=5):
@@ -132,4 +133,21 @@ if __name__ == "__main__":
     sal_guess=np.load('wbot/salet_guess.npy')
     
     #run interactive solve script allowing the user to input their choice of guess word and tile outcomes.
+
+    print('')
+    print("This feature does not require the true word being known and can be used to play along \n with a live Wordle game. The Bot will first suggest a starting word that you can either choose \n or pick a different word for the offical alowed guess list found in guess_words.txt.")
+    print('')
+    print('''You are then expected to input the outcome of the chosen guess word's tiles. 0 represents \n a grey tile, 1 represents a yellow tile and 2 represents a green tile.''')
+    print('')
+    #tile colours 
+    cs=[Fore.WHITE,Fore.YELLOW,Fore.GREEN]
+    
+    print('So for:')
+    print(Style.RESET_ALL)
+    print('')
+    print(Back.BLACK+cs[2]+'green'+cs[1]+' yellow yellow'+cs[2]+' green'+cs[0]+' grey'+Style.RESET_ALL+' you would input '+Back.BLACK+cs[2]+'2'+cs[1]+'11'+cs[2]+'2'+cs[0]+'1'+Style.RESET_ALL)
+    print('')
+    print("After these results are inputted, WordleBot will say how many possible answers are \n remaining and suggests the next guess that would maximise expected information. Again you can \n choose this suggested next guess or pick your own. The process continues until unkown word is found.")
+    print('')
+
     interactive_solve(tiles_grid,plist,glist,sal_patterns,sal_guess)

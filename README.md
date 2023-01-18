@@ -77,6 +77,8 @@ Example:
 >>> Final Answer: FLICK
 
 >>> Total Guesses: 4
+  
+ If you would like to read about the specific custom modules used to make WordleBot, please refer to the docstring in `wbot/__init__.py`.
 
 ## Data Analysis Pipeline
   
@@ -98,6 +100,8 @@ Author: [Ben Boyd](https://github.com/benboyd97), PhD Student at the University 
 WordleBot Solution Idea: 3Blue1Brown's [YouTube video](https://www.youtube.com/watch?v=v68zYyaEmEA)
 
 Made for James Fergusson's Cambridge course in [Research-Computing](https://github.com/JamesFergusson/Research-Computing)
+
+Helpful Discussion: [Samuel Turner](https://github.com/turnersam96)
 
 
 
