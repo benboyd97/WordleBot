@@ -1,7 +1,7 @@
 # WordleBot
 Wordle Bot built to solve [Wordle](https://www.nytimes.com/games/wordle/index.html) in fewest number of guesses using Information Theory.
 
-The bot calculates the expected information gain for each possible guess word and picks the maximum. The bot takes on average 3.448 guesses to answer all possible Wordle words. You can choose to play interactively with the WordleBot using `interactive_solve.py` or allow it to simulate games automatically using `auto_solve.py`.
+The bot calculates the expected information gain for each possible guess word and picks the maximum. The bot takes on average 3.448 guesses to answer all possible Wordle words. You can choose to play interactively with the WordleBot using `interactive_solve.py` or allow it to simulate games automatically using `auto_solve.py`. The corresponding report that describes background, methodology, development and final results can be found in the `WordleBot_Report.pdf` file.
 
 ## Setting up WordleBot Using Docker
 If you use `docker` you can setup a portable version of WordleBot by copy and pasting the code below into terminal. Alternatively you can `git clone` the repository and make sure your environment is consistent with the `environment.yml` packages and versions.
