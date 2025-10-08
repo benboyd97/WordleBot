@@ -145,7 +145,7 @@ if __name__ == "__main__":
     print('So for:')
     print(Style.RESET_ALL)
     print('')
-    print(Back.BLACK+cs[2]+'green'+cs[1]+' yellow yellow'+cs[2]+' green'+cs[0]+' grey'+Style.RESET_ALL+' you would input '+Back.BLACK+cs[2]+'2'+cs[1]+'11'+cs[2]+'2'+cs[0]+'1'+Style.RESET_ALL)
+    print(Back.BLACK+cs[2]+'green'+cs[1]+' yellow yellow'+cs[2]+' green'+cs[0]+' grey'+Style.RESET_ALL+' you would input '+Back.BLACK+cs[2]+'2'+cs[1]+'11'+cs[2]+'2'+cs[0]+'0'+Style.RESET_ALL)
     print('')
     print("After these results are inputted, WordleBot will say how many possible answers are \n remaining and suggests the next guess that would maximise expected information. Again you can \n choose this suggested next guess or pick your own. The process continues until unkown word is found.")
     print('')

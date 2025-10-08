@@ -46,7 +46,7 @@ You can also choose to play WordleBot interactively:
 cd WordleBot
 python interactive_solve.py
 ```
-This feature does not require the true word being known and can be used to play along with a live Wordle game. The Bot will first suggest a starting word that you can either choose or pick a different word for the offical alowed guess list found in `guess_words.txt`. You are then expected to input the outcome of the chosen guess word's tiles. `0` represents a grey tile, `1` represents a yellow tile and `2` represents a green tile. So for green, yellow, yellow, green and grey, you would input `21120`. After these results are inputted, WordleBot will say how many possible answers are remaining and suggests the next guess that would maximise expected information. Again you can choose this suggested next gues or pick your own. The process continues until unkown word is found. 
+This feature does not require the true word being known and can be used to play along with a live Wordle game. The Bot will first suggest a starting word that you can either choose or pick a different word for the offical alowed guess list found in `guess_words.txt`. You are then expected to input the outcome of the chosen guess word's tiles. `0` represents a grey tile, `1` represents a yellow tile and `2` represents a green tile. So for green, yellow, yellow, green and grey, you would input `21120`. After these results are inputted, WordleBot will say how many possible answers are remaining and suggests the next guess that would maximise expected information. Again you can choose this suggested next guess or pick your own. The process continues until unkown word is found. 
 
 Example:
 
@@ -86,7 +86,7 @@ Example:
   
  The `Data_Experiments.ipynb` contains a data pipeline that applies WordleBot to every posible Wordle answer. There are also profiling tests in order to test the time efficiency of the bot. The results of these experiments are presented in `Results_Data_Analysis.ipynb`.
   
-## Unit Testing and Conintous Integration
+## Unit Testing and Continuous Integration
 
 In the directory `WordleBot/wbot/UnitTesting/` there are a series of 12 unit tests that test all the modules used in the Wordle Bot. These tests can run locally from the `WordleBot` parent file using the following commands:
 
